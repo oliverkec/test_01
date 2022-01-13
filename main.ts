@@ -1,5 +1,7 @@
+let hraj = 0
 input.onButtonPressed(Button.A, function () {
-    while (true) {
+    hraj = 1
+    while (hraj) {
         images.createImage(`
             . # # # .
             # . # . #
@@ -98,10 +100,11 @@ input.onButtonPressed(Button.A, function () {
             . . # . .
             . . # . .
             `).showImage(0)
+        zhasni()
     }
 })
 input.onButtonPressed(Button.B, function () {
-    zhasni()
+    hraj = 0
 })
 function zhasni () {
     for (let i = 0; i <= 4; i++) {
